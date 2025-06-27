@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIBEN Trade - Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header Section -->
+        <header>
+            <h1>UNIBEN Trade Hub</h1>
+            <div class="user-info">
+                <span>Hi, <strong>John</strong></span>
+                <img src="assets/default-avatar.png" alt="User Profile">
+            </div>
+        </header>
+
+        <!-- Search and Filters -->
+        <div class="search-filter-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search textbooks, gadgets..." aria-label="Search items">
+                <button type="submit" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="books">Books</button>
+                <button class="filter-btn" data-filter="electronics">Electronics</button>
+                <button class="filter-btn" data-filter="clothing">Clothing</button>
+                <button class="filter-btn" data-filter="others">Others</button>
+            </div>
+        </div>
+
+        <!-- Items Grid -->
+        <div class="items-grid" id="itemsGrid">
+            <!-- Item 1 -->
+            <div class="item-card" data-category="books">
+                <div class="item-img-container">
+                    <img src="assets/chem-book.jpg" alt="Chemistry Textbook" class="item-img">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Chemistry 101 Textbook (5th Ed.)</h3>
+                    <span class="item-price">₦5,000</span>
+                    <div class="item-footer">
+                        <div class="item-seller">
+                            <img src="assets/default-avatar.png" alt="Sarah" class="seller-avatar">
+                            <span>Sarah K.</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add to cart">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item-card" data-category="electronics">
+                <div class="item-img-container">
+                    <img src="assets/calculator.jpg" alt="Graphing Calculator" class="item-img">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">TI-84 Graphing Calculator</h3>
+                    <span class="item-price">₦8,500</span>
+                    <div class="item-footer">
+                        <div class="item-seller">
+                            <img src="assets/default-avatar.png" alt="David" class="seller-avatar">
+                            <span>David M.</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add to cart">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 to 20 would follow the same pattern -->
+            <!-- Example of 3rd item -->
+            <div class="item-card" data-category="stationery">
+                <div class="item-img-container">
+                    <img src="assets/notebook.jpg" alt="Engineering Notebook" class="item-img">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Engineering Lab Notebook</h3>
+                    <span class="item-price">₦2,000</span>
+                    <div class="item-footer">
+                        <div class="item-seller">
+                            <img src="assets/default-avatar.png" alt="Emmanuel" class="seller-avatar">
+                            <span>Emmanuel O.</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add to cart">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with remaining 17 items following the same structure -->
+        </div>
+    </div>
+
+    <script src="Dashboard.js"></script>
+</body>
+</html>

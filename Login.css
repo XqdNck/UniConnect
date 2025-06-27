@@ -1,0 +1,185 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Close Button (Top-Left) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #d40000;
+}
+
+/* Card Container */
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* For close button positioning */
+}
+
+/* Logo Placeholder */
+.logo-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-placeholder img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Typography */
+h1 {
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+
+/* Form Elements */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #d40000;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(212, 0, 0, 0.1);
+}
+
+/* Password Input with Embedded Eye Icon */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px; /* Space for eye icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #d40000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #a30000;
+}
+
+/* Footer Links */
+.auth-footer {
+    margin-top: 20px;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #d40000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+    color: #d40000;
+    margin-top: 16px;
+    min-height: 20px;
+    font-size: 0.9rem;
+}
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #666;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password a:hover {
+    color: #d40000;
+    text-decoration: underline;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIBEN Trade - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Close Button (Top-Left) -->
+            <a href="Homepage.html" class="close-btn">
+                <i class="fas fa-times"></i>
+            </a>
+            
+            <!-- Logo Placeholder -->
+            <div class="logo-placeholder">
+                <img src="Logo.png" alt="UNIBEN Trade Logo" id="logo">
+            </div>
+
+            <h1>Login to Your Account</h1>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">UNIBEN Email</label>
+                    <input type="email" id="email" placeholder="user@uniben.edu" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="error-message" id="errorMessage"></p>
+            </form>
+            <div class="forgot-password">
+    <a href="UnderConstruction.html">Forgot Password?</a>
+</div>
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.html">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="Login.js"></script>
+</body>
+</html>

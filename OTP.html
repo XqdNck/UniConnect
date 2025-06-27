@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email | UniConnect</title>
+    <link rel="stylesheet" href="OTP.css">
+</head>
+<body>
+    <div class="otp-container">
+        <div class="otp-card">
+            <h1>Verify Your Email</h1>
+            <p>Enter the 6-digit code sent to <strong id="user-email"></strong></p>
+            
+            <form id="otp-form">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-digit" autofocus>
+                    <input type="text" maxlength="1" class="otp-digit">
+                    <input type="text" maxlength="1" class="otp-digit">
+                    <input type="text" maxlength="1" class="otp-digit">
+                    <input type="text" maxlength="1" class="otp-digit">
+                    <input type="text" maxlength="1" class="otp-digit">
+                </div>
+                <button type="submit">Verify</button>
+            </form>
+            
+            <p class="resend-link">
+                Didn't receive code? <a href="#" id="resend-btn">Resend</a>
+            </p>
+            <div id="otp-error" class="error"></div>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-auth-compat.js"></script>
+    <script src="OTP.js"></script>
+</body>
+</html>

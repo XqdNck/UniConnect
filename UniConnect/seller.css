@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(222, 229, 235);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #2d2f36;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: rgb(190, 218, 241);
+  transition: transform 0.7s ease-out;
+}
+.menu-icon:active {
+  transform: rotate(360deg);
+  color: rgb(255, 6, 6);
+}
+
+aside {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: calc(100% - 60px);
+  background-color: #3b3e47e3;
+  color: white;
+  padding: 1rem;
+  transition: transform 0.7s ease-in-out;
+}
+
+aside.hidden {
+  transform: translateX(-100%);
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav ul li {
+  padding: 0.75rem 0;
+  border-bottom: 0.005px solid rgb(222, 229, 235);
+  border-left: 1.5px dashed rgb(222, 229, 235);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+aside nav ul li:hover {
+  transform: translateY(6px);
+  border-bottom: dashed 1px #f59a83;
+  border-left: dashed 1px #f59a83;
+}
+
+main {
+  margin-top: 60px;
+  margin-left: 0;
+  padding: 2rem;
+  flex: 1;
+  transition: margin-left 0.5s ease-in-out;
+}
+
+aside:not(.hidden) + main {
+  margin-left: 200px;
+}
+ul img {
+  height: 30px;
+  width: 30px;
+}
+ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* 📦 Main dashboard container */
+.dashboard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* 🧑 Profile Summary */
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f0f0f0;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px #3b3e47a1;
+  justify-content: space-evenly;
+  border-left: solid 5px #2a9d8f;
+  transition: transform 0.5s ease-in-out;
+}
+.profile-summary:hover {
+  transform: translateX(5px);
+  border-left: solid 5px #9d412a;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.profile-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 📊 Product and Order Count Cards */
+.count-section {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px #3b3e479c;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 3px 8px #ce2b2b9c;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+/* 📈 Analytics Section */
+.analytics {
+  background: #fefefe;
+  padding: 20px;
+  border-left: 5px solid #2a9d8f;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px #3b3e479c;
+  transition: transform 0.5s ease-in-out;
+}
+.analytics:hover {
+  transform: translateX(5px);
+  border-left: solid 5px #9d412a;
+}
+.analytics h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.analytics p {
+  font-size: 14px;
+  color: #555;
+}

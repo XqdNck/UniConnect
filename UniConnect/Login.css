@@ -15,7 +15,7 @@
   width: 90%;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(122, 8, 8, 0.808);
+  box-shadow: 0 2px 8px rgba(97, 9, 9, 0.808);
   transition: 0.5s;
 }
 
@@ -59,4 +59,8 @@
 .auth-footer a {
   color: #d40000;
   text-decoration: none;
+}
+/* Extra designs */
+span {
+  color: #d40000;
 }

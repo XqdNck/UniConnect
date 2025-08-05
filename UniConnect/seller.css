@@ -30,7 +30,7 @@ header {
   font-size: 1.5rem;
   margin-right: 1rem;
   color: rgb(190, 218, 241);
-  transition: transform 0.7s ease-out;
+  transition: transform 2s ease-out;
 }
 .menu-icon:active {
   transform: rotate(360deg);

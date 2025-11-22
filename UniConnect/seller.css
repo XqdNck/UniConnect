@@ -72,15 +72,15 @@ aside nav ul li:hover {
 }
 
 main {
-  margin-top: 60px;
-  margin-left: 0;
+  margin-top: 250px;
+  margin-left: 50;
   padding: 2rem;
   flex: 1;
   transition: margin-left 0.5s ease-in-out;
 }
 
 aside:not(.hidden) + main {
-  margin-left: 200px;
+  margin-left: 250px;
 }
 ul img {
   height: 30px;

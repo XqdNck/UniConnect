@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Optional: Show image preview when user uploads a file
   imageInput.addEventListener("change", () => {
     const file = imageInput.files[0];
-    if (file && file.type.startsWith("image/")) {
+    if (
+      (file && file.type.startsWith("image/")) ||
+      (file && file.type.startsWith("video/"))
+    ) {
       const reader = new FileReader();
       reader.onload = function (e) {
         imagePreview.src = e.target.result;

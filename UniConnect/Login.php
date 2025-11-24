@@ -1,33 +1,26 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+session_start();
 
-// Only process form if submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $login = trim($_POST['login']); // username or email
-    $password = trim($_POST['password']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
-    $found = false;
-    if (isset($_SESSION['users'])) {
-        foreach ($_SESSION['users'] as $user) {
-            if (($user['username'] === $login || $user['email'] === $login) &&
-                password_verify($password, $user['password'])) {
-                // Save the username in session
-                $_SESSION['user'] = $user['username'];
-                $found = true;
-                header("Location: index.php?page=dashboard");
-                exit;
-            }
-        }
-    }
+    // Collect form input safely
+    $username_or_email = trim($_POST['username_or_email'] ?? '');
+    $password = trim($_POST['password'] ?? '');
 
-    if (!$found) {
-        $error = "Invalid username/email or password.";
+    // Check if empty
+    if (empty($username_or_email) || empty($password)) {
+        $error = "Please fill all fields.";
+    } else {
+
+        // TODO: query database
+        // Example:
+        // $sql = "SELECT * FROM users WHERE username = ? OR email = ?";
+        // ...
+
     }
 }
-
 ?>
+
 
 
 

@@ -1,30 +1,38 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+// Only process form if submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Use 'username' here to match the HTML input name="username"
+    $login_input = trim($_POST['username']); 
+    $password_input = trim($_POST['password']);
 
-    // Collect form input safely
-    $username_or_email = trim($_POST['username_or_email'] ?? '');
-    $password = trim($_POST['password'] ?? '');
+    $found = false;
 
-    // Check if empty
-    if (empty($username_or_email) || empty($password)) {
-        $error = "Please fill all fields.";
-    } else {
+    // Check if users array exists and if this specific user exists
+    // We check directly by key (since we saved it that way in Signup.php)
+    if (isset($_SESSION['users']) && isset($_SESSION['users'][$login_input])) {
+        
+        $stored_user = $_SESSION['users'][$login_input];
 
-        // TODO: query database
-        // Example:
-        // $sql = "SELECT * FROM users WHERE username = ? OR email = ?";
-        // ...
-
+        // Verify the password
+        if (password_verify($password_input, $stored_user['password'])) {
+            // Password is correct!
+            $_SESSION['user'] = $login_input; // Save session
+            $_SESSION['fullname'] = $stored_user['fullname']; // Optional: save name too
+            
+            // Redirect to dashboard
+            header("Location: index.php"); 
+            exit;
+        }
     }
+
+    // If we reach here, login failed
+    $error = "Invalid username/email or password.";
 }
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
   <body>
     <?php
     if (isset($_GET['msg'])){
-      echo "<p style = 'color:red'>" .htmlspecialchars($_GET['msg']) . "</p>";
+      echo "<p style = 'color:red; text-align:center;'>" .htmlspecialchars($_GET['msg']) . "</p>";
     }
     ?>
     <div class="auth-container">

@@ -28,7 +28,7 @@ orderCard.addEventListener("click", () => {
 });
 
 dash.addEventListener("click", () => {
-  window.location.href = "seller.html";
+  window.location.href = "index.php?page=Homepage";
 });
 
 add.addEventListener("click", () => {

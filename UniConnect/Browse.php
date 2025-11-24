@@ -1,0 +1,73 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Listings | UniConnect</title>
+    <link rel="stylesheet" href="Browse.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">UniConnect</div>
+      <div class="nav-links">
+        <a href="index.php?page=home" class="active">HOME</a>
+        <a href="index.php?page=dashboard">SELL</a>
+        <a href="index.php?page=login">LOGIN</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="browse-container">
+      <!-- Search Filters -->
+      <section class="filters">
+        <input type="text" placeholder="Search..." />
+        <select>
+          <option>All Categories</option>
+          <option>Books</option>
+          <option>Electronics</option>
+        </select>
+        <button class="filter-btn">Apply</button>
+      </section>
+
+      <!-- Listings Grid -->
+      <div class="listings-grid">
+        <!-- Listing Card 1 -->
+        <div class="listing-card">
+          <img src="assets/book.jpg" alt="ECO 101 Textbook" />
+          <div class="card-details">
+            <h3>ECO 101 Textbook</h3>
+            <p class="price">₦2,500</p>
+            <p class="info">Faculty of Science · 2 days ago</p>
+            <div class="card-buttons">
+              <button class="view-btn">View</button>
+              <button class="save-btn">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing Card 2 -->
+        <div class="listing-card">
+          <img src="assets/phone.jpg" alt="Used iPhone X" />
+          <div class="card-details">
+            <h3>Used iPhone X</h3>
+            <p class="price">₦85,000</p>
+            <p class="info">Faculty of Engineering · 1 week ago</p>
+            <div class="card-buttons">
+              <button class="view-btn">View</button>
+              <button class="save-btn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

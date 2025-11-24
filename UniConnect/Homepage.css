@@ -1,3 +1,12 @@
+@media (max-width: 768px) {
+    .category-grid, .listing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar input {
+        width: 80%;
+    }
+}
 /* Base Styles */
 * {
     margin: 0;
@@ -10,6 +19,61 @@ body {
     background-color: #f5f5f5;
     color: #000000;
 }
+
+/* Responsive Design */
+
+/* Container */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button */
+.user-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* User image */
+.user-img, .user-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    object-fit: cover;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
 
 /* Navbar */
 .navbar {
@@ -33,9 +97,40 @@ body {
 }
 
 .sell-button {
+    /* background-color: #d40000; */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+     transition: background-color 0.3s ease transform 0.3s ease;
+}
+.sell-button:hover {
     background-color: #d40000;
     padding: 0.5rem 1rem;
     border-radius: 4px;
+      transform: scale(1.05);
+}
+.buy-button {
+    /* background-color: #d40000; */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.buy-button:hover {
+    background-color: #d40000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+      transform: scale(1.05);
+}
+.login-button {
+    background-color: #d40000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.login-button:hover {
+    background-color: #d40000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+      transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -158,13 +253,3 @@ body {
     margin: 0 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .category-grid, .listing-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .search-bar input {
-        width: 80%;
-    }
-}
